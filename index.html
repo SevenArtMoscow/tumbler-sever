@@ -3,243 +3,184 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SEVER — specialty coffee на Патриарших</title>
-  <meta name="description" content="SEVER — specialty coffee и завтраки. Москва, Патриаршие пруды. Бронь стола в Telegram. Демо TUMBLER." />
+  <title>SEVER — кофейня</title>
+  <meta name="description" content="SEVER — кофейный бар. Меню, зал, бронь. Демо TUMBLER." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@500;700;900&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip" href="#book">К брони</a>
+  <a class="skip" href="#content">К содержимому</a>
 
-  <header class="header">
-    <a class="logo" href="#">SEVER</a>
-    <nav class="nav" aria-label="Основная">
-      <a href="#about">О нас</a>
-      <a href="#menu">Меню</a>
-      <a href="#space">Зал</a>
-      <a href="#book">Бронь</a>
-    </nav>
-    <a class="btn btn-accent" href="#book">Забронировать</a>
-    <button class="burger" type="button" aria-label="Меню" aria-expanded="false">
+  <div class="portal">
+    <div class="portal-bg">
+      <img src="images/hero.jpg" alt="" width="1920" height="1080" />
+      <div class="portal-veil"></div>
+    </div>
+
+    <button class="menu-fab" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="drawer">
       <span></span><span></span>
     </button>
-  </header>
 
-  <div class="mobile-nav" hidden>
-    <a href="#about">О нас</a>
-    <a href="#menu">Меню</a>
-    <a href="#space">Зал</a>
-    <a href="#book">Бронь</a>
+    <nav class="orbit" aria-label="Разделы">
+      <a href="#menu" style="--i:0">Меню</a>
+      <a href="#guest" style="--i:1">Для гостя</a>
+      <a href="#space" style="--i:2">Зал</a>
+      <a href="#book" style="--i:3">Бронь</a>
+      <a href="#about" style="--i:4">О нас</a>
+      <a href="#hours" style="--i:5">Часы</a>
+      <a href="#contact" style="--i:6">Контакты</a>
+      <a href="#roast" style="--i:7">Зерно</a>
+    </nav>
+
+    <div class="brand-core">
+      <p class="brand-mark">SEVER</p>
+      <p class="brand-sub">кофейный бар</p>
+      <a class="btn-yellow" href="#book">Забронировать стол</a>
+    </div>
+
+    <a class="scroll-hint" href="#content" aria-label="Дальше">
+      <span></span>
+    </a>
   </div>
 
-  <main>
-    <section class="hero">
-      <div class="hero-media">
-        <img
-          src="images/hero.jpg"
-          alt="Чашка фильтр-кофе на столе в кофейне"
-          width="1920"
-          height="1080"
-        />
-        <div class="hero-veil"></div>
+  <aside class="drawer" id="drawer" hidden>
+    <button class="drawer-close" type="button" aria-label="Закрыть">×</button>
+    <a href="#menu">Меню</a>
+    <a href="#guest">Для гостя</a>
+    <a href="#space">Зал</a>
+    <a href="#book">Бронь</a>
+    <a href="#about">О нас</a>
+    <a href="#hours">Часы</a>
+    <a href="#contact">Контакты</a>
+    <a href="#roast">Зерно</a>
+  </aside>
+
+  <main id="content">
+    <section id="about" class="block">
+      <div class="block-copy">
+        <p class="eyebrow">О бренде</p>
+        <h1>SEVER — кофе по пути и на месте</h1>
+        <p>Маленький бар на Патриарших. Эспрессо, фильтр, завтраки до полудня. Без франшизной сети — один зал, своё зерно, свои руки.</p>
       </div>
-      <div class="hero-inner">
-        <p class="hero-loc">Москва · Патриаршие пруды</p>
-        <h1>Северный свет.<br /><span>Крепкий кофе.</span></h1>
-        <p class="hero-lead">Specialty coffee и завтраки до полудня. Маленький зал у прудов — двенадцать мест, длинный бар, свет из окна.</p>
-        <div class="hero-cta">
-          <a class="btn btn-accent btn-lg" href="#book">Забронировать стол</a>
-          <a class="btn btn-ghost btn-lg" href="#menu">Смотреть меню</a>
-        </div>
+      <div class="block-media">
+        <img src="images/barista.jpg" alt="Бариста за стойкой" width="1000" height="1200" loading="lazy" />
       </div>
     </section>
 
-    <section class="stats" aria-label="Коротко о кофейне">
-      <div class="stat"><strong>12</strong><span>мест у окна</span></div>
-      <div class="stat"><strong>8:00</strong><span>открываемся в будни</span></div>
-      <div class="stat"><strong>V60</strong><span>фильтр каждый день</span></div>
-      <div class="stat"><strong>100%</strong><span>specialty зерна</span></div>
-    </section>
-
-    <section id="about" class="about">
-      <div class="about-copy">
-        <h2>Кофейня, а не проходной двор</h2>
-        <p>SEVER — про спокойное утро и честный эспрессо. Зерно ротируем каждые две недели, молоко — честное, не «для пенки». Можно с ноутбуком после 11, розетки у каждой стойки.</p>
-        <ul class="about-list">
-          <li>Обжарка партнёров из Питера и Москвы</li>
-          <li>Завтраки до 12:00</li>
-          <li>Без громкой музыки до обеда</li>
+    <section id="menu" class="block block-alt">
+      <div class="section-top">
+        <p class="eyebrow">Меню</p>
+        <h2>Что пьём и едим</h2>
+      </div>
+      <div class="menu-tabs" role="tablist">
+        <button type="button" class="is-on" data-tab="coffee" role="tab" aria-selected="true">Кофе</button>
+        <button type="button" data-tab="food" role="tab" aria-selected="false">Завтраки</button>
+        <button type="button" data-tab="drink" role="tab" aria-selected="false">Не кофе</button>
+      </div>
+      <div class="menu-split" id="tab-coffee">
+        <img src="images/espresso.jpg" alt="Эспрессо" width="900" height="700" loading="lazy" />
+        <ul class="price-list">
+          <li><span>Эспрессо</span><b>220 ₽</b></li>
+          <li><span>Американо</span><b>250 ₽</b></li>
+          <li><span>Капучино</span><b>320 ₽</b></li>
+          <li><span>Флэт уайт</span><b>340 ₽</b></li>
+          <li><span>Латте</span><b>350 ₽</b></li>
+          <li><span>Фильтр дня</span><b>380 ₽</b></li>
         </ul>
       </div>
-      <div class="about-photo">
-        <img
-          src="images/barista.jpg"
-          alt="Бариста готовит кофе за стойкой"
-          width="1000"
-          height="1200"
-          loading="lazy"
-        />
+      <div class="menu-split" id="tab-food" hidden>
+        <img src="images/breakfast.jpg" alt="Завтрак" width="900" height="700" loading="lazy" />
+        <ul class="price-list">
+          <li><span>Скрэмбл на тосте</span><b>490 ₽</b></li>
+          <li><span>Овсянка с грушей</span><b>420 ₽</b></li>
+          <li><span>Сырники Sever</span><b>460 ₽</b></li>
+          <li><span>Авокадо-тост</span><b>520 ₽</b></li>
+          <li><span>Круассан</span><b>290 ₽</b></li>
+        </ul>
+      </div>
+      <div class="menu-split" id="tab-drink" hidden>
+        <img src="images/matcha.jpg" alt="Матча" width="900" height="700" loading="lazy" />
+        <ul class="price-list">
+          <li><span>Матча</span><b>420 ₽</b></li>
+          <li><span>Какао</span><b>310 ₽</b></li>
+          <li><span>Чай сенча</span><b>280 ₽</b></li>
+          <li><span>Лимонад</span><b>350 ₽</b></li>
+        </ul>
       </div>
     </section>
 
-    <section id="menu" class="menu">
-      <div class="section-head">
-        <h2>Меню</h2>
-        <p>Цены ориентировочные — актуальные утром у бариста или в Telegram.</p>
+    <section id="guest" class="strip-yellow">
+      <div>
+        <h2>Для гостя</h2>
+        <p>Wi‑Fi, розетки, можно со своим ноутбуком после 11:00. Детям — какао и круассан. Собаки мелких пород — ок, если не мешают залу.</p>
       </div>
-      <div class="menu-tabs" role="tablist" aria-label="Разделы меню">
-        <button type="button" class="menu-tab is-active" role="tab" aria-selected="true" data-tab="coffee">Кофе</button>
-        <button type="button" class="menu-tab" role="tab" aria-selected="false" data-tab="food">Завтраки</button>
-        <button type="button" class="menu-tab" role="tab" aria-selected="false" data-tab="other">Не кофе</button>
+      <a class="btn-dark" href="#book">Занять стол</a>
+    </section>
+
+    <section id="space" class="block">
+      <div class="section-top">
+        <p class="eyebrow">Зал</p>
+        <h2>Двенадцать мест у окна</h2>
       </div>
-      <div class="menu-panels">
-        <div class="menu-panel is-active" id="panel-coffee" role="tabpanel">
-          <div class="menu-feat">
-            <img src="images/espresso.jpg" alt="Эспрессо в чашке" width="900" height="700" loading="lazy" />
-            <div>
-              <p class="tag">Хит утра</p>
-              <h3>Фильтр дня</h3>
-              <p>V60 на зерне сезона. Спроси на баре — расскажем про регион и обжарку.</p>
-              <p class="price">380 ₽</p>
-            </div>
-          </div>
-          <ul class="menu-list">
-            <li><span>Эспрессо</span><span>220 ₽</span></li>
-            <li><span>Американо</span><span>250 ₽</span></li>
-            <li><span>Капучино</span><span>320 ₽</span></li>
-            <li><span>Флэт уайт</span><span>340 ₽</span></li>
-            <li><span>Латте</span><span>350 ₽</span></li>
-            <li><span>Раф ванильный</span><span>390 ₽</span></li>
-          </ul>
-        </div>
-        <div class="menu-panel" id="panel-food" role="tabpanel" hidden>
-          <div class="menu-feat">
-            <img src="images/breakfast.jpg" alt="Завтрак: яйца и тост" width="900" height="700" loading="lazy" />
-            <div>
-              <p class="tag">До 12:00</p>
-              <h3>Скрэмбл на тосте</h3>
-              <p>Яйца, сливочное масло, зелень, хлеб на закваске.</p>
-              <p class="price">490 ₽</p>
-            </div>
-          </div>
-          <ul class="menu-list">
-            <li><span>Овсянка с грушей</span><span>420 ₽</span></li>
-            <li><span>Сырники Sever</span><span>460 ₽</span></li>
-            <li><span>Авокадо-тост</span><span>520 ₽</span></li>
-            <li><span>Круассан сливочный</span><span>290 ₽</span></li>
-            <li><span>Гранола с йогуртом</span><span>380 ₽</span></li>
-          </ul>
-        </div>
-        <div class="menu-panel" id="panel-other" role="tabpanel" hidden>
-          <div class="menu-feat">
-            <img src="images/matcha.jpg" alt="Матча латте" width="900" height="700" loading="lazy" />
-            <div>
-              <p class="tag">Без кофеина</p>
-              <h3>Матча на молоке</h3>
-              <p>Церемониальный грейд, можно на растительном.</p>
-              <p class="price">420 ₽</p>
-            </div>
-          </div>
-          <ul class="menu-list">
-            <li><span>Какао</span><span>310 ₽</span></li>
-            <li><span>Чай сенча</span><span>280 ₽</span></li>
-            <li><span>Лимонад домашний</span><span>350 ₽</span></li>
-            <li><span>Вода / тоник</span><span>150 ₽</span></li>
-          </ul>
-        </div>
+      <div class="gallery">
+        <img src="images/hall1.jpg" alt="Зал кофейни" width="1400" height="900" loading="lazy" />
+        <img src="images/hall2.jpg" alt="Интерьер" width="800" height="600" loading="lazy" />
+        <img src="images/cup.jpg" alt="Чашка кофе" width="800" height="600" loading="lazy" />
       </div>
     </section>
 
-    <section id="space" class="space">
-      <div class="section-head">
-        <h2>Зал</h2>
-        <p>Двенадцать мест. Бар у окна. Тихо до одиннадцати.</p>
+    <section id="roast" class="block block-alt">
+      <div class="block-copy">
+        <p class="eyebrow">Зерно</p>
+        <h2>Своя полка обжарки</h2>
+        <p>Крутим зерно партнёров из Москвы и Питера. На баре всегда есть фильтр дня и эспрессо-бленд. Можно купить пачку 250 г с собой.</p>
       </div>
-      <div class="space-grid">
-        <figure class="space-big">
-          <img src="images/hall1.jpg" alt="Интерьер кофейни со столиками" width="1400" height="900" loading="lazy" />
-        </figure>
-        <figure>
-          <img src="images/hall2.jpg" alt="Кофейня изнутри, свет из окна" width="800" height="600" loading="lazy" />
-        </figure>
-        <figure>
-          <img src="images/cup.jpg" alt="Чашка кофе на деревянном столе" width="800" height="600" loading="lazy" />
-        </figure>
+      <div class="block-media">
+        <img src="images/cup.jpg" alt="Зерно и чашка" width="1000" height="800" loading="lazy" />
       </div>
     </section>
 
-    <section class="hours">
-      <div class="hours-card">
-        <h2>Часы и адрес</h2>
-        <div class="hours-grid">
-          <div>
-            <p class="label">Открыты</p>
-            <p>Пн–Пт 8:00–21:00<br />Сб–Вс 9:00–22:00</p>
-          </div>
-          <div>
-            <p class="label">Адрес</p>
-            <p>Москва, Патриаршие<br />Малый Козихинский, 7</p>
-          </div>
-          <div>
-            <p class="label">Связь</p>
-            <p><a href="https://t.me/life_slow" target="_blank" rel="noopener">@life_slow</a><br />бронь и вопросы</p>
-          </div>
-        </div>
+    <section id="hours" class="hours-row">
+      <div>
+        <p class="eyebrow">Часы</p>
+        <p>Пн–Пт 8:00–21:00<br />Сб–Вс 9:00–22:00</p>
+      </div>
+      <div id="contact">
+        <p class="eyebrow">Контакты</p>
+        <p>Патриаршие, Малый Козихинский, 7<br /><a href="https://t.me/life_slow" target="_blank" rel="noopener">@life_slow</a></p>
       </div>
     </section>
 
     <section id="book" class="book">
-      <div class="book-side">
-        <h2>Бронь стола</h2>
-        <p>Напиши имя, дату и сколько вас — подтвердим в Telegram за пару минут.</p>
-        <ul class="book-notes">
-          <li>Стол держим 15 минут</li>
-          <li>До 4 гостей за один стол</li>
-          <li>Большие компании — лучше позвонить утром</li>
-        </ul>
+      <div>
+        <p class="eyebrow">Бронь</p>
+        <h2>Стол под себя</h2>
+        <p>Заявка уходит в Telegram — подтвердим за пару минут.</p>
       </div>
-      <form class="book-form" id="bookForm" novalidate>
-        <label>
-          <span>Имя</span>
-          <input type="text" name="name" required placeholder="Как к вам обращаться" autocomplete="name" />
-        </label>
-        <label>
-          <span>Telegram</span>
-          <input type="text" name="tg" required placeholder="@username" />
-        </label>
-        <label>
-          <span>Дата</span>
-          <input type="date" name="date" required />
-        </label>
-        <label>
-          <span>Время</span>
-          <input type="time" name="time" required value="10:00" />
-        </label>
-        <label>
-          <span>Гостей</span>
-          <select name="guests" required>
-            <option value="1">1</option>
-            <option value="2" selected>2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+      <form id="bookForm" novalidate>
+        <label>Имя<input name="name" required placeholder="Как к вам обращаться" /></label>
+        <label>Telegram<input name="tg" required placeholder="@username" /></label>
+        <label>Дата<input type="date" name="date" required /></label>
+        <label>Время<input type="time" name="time" required value="10:00" /></label>
+        <label>Гостей
+          <select name="guests">
+            <option>1</option>
+            <option selected>2</option>
+            <option>3</option>
+            <option>4</option>
           </select>
         </label>
-        <label>
-          <span>Комментарий</span>
-          <input type="text" name="note" placeholder="У окна / с ноутбуком" />
-        </label>
-        <button class="btn btn-accent btn-lg btn-block" type="submit">Отправить в Telegram</button>
-        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        <button class="btn-yellow" type="submit">Отправить</button>
+        <p class="form-note" id="formNote" role="status"></p>
       </form>
     </section>
   </main>
 
-  <footer class="footer">
-    <a class="logo" href="#">SEVER</a>
-    <p>Демо-витрина TUMBLER · не действующее заведение</p>
-    <a href="https://t.me/life_slow" target="_blank" rel="noopener">@life_slow</a>
+  <footer class="foot">
+    <strong>SEVER</strong>
+    <span>Демо TUMBLER · не Coffee Way и не действующее заведение</span>
   </footer>
 
   <script src="script.js"></script>

@@ -1,9 +1,10 @@
 (() => {
+  const fab = document.querySelector(".menu-fab");
+  const drawer = document.getElementById("drawer");
+  const closeBtn = document.querySelector(".drawer-close");
   const form = document.getElementById("bookForm");
   const note = document.getElementById("formNote");
   const dateInput = form?.querySelector('[name="date"]');
-  const burger = document.querySelector(".burger");
-  const mobileNav = document.querySelector(".mobile-nav");
 
   if (dateInput) {
     const d = new Date();
@@ -12,33 +13,31 @@
     dateInput.value = d.toISOString().slice(0, 10);
   }
 
-  document.querySelectorAll(".menu-tab").forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const id = tab.dataset.tab;
-      document.querySelectorAll(".menu-tab").forEach((t) => {
-        const on = t === tab;
-        t.classList.toggle("is-active", on);
-        t.setAttribute("aria-selected", on ? "true" : "false");
-      });
-      document.querySelectorAll(".menu-panel").forEach((panel) => {
-        const on = panel.id === `panel-${id}`;
-        panel.classList.toggle("is-active", on);
-        panel.hidden = !on;
-      });
-    });
+  function openDrawer(open) {
+    if (!drawer || !fab) return;
+    drawer.hidden = !open;
+    fab.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+
+  fab?.addEventListener("click", () => openDrawer(drawer.hidden));
+  closeBtn?.addEventListener("click", () => openDrawer(false));
+  drawer?.querySelectorAll("a").forEach((a) => {
+    a.addEventListener("click", () => openDrawer(false));
   });
 
-  burger?.addEventListener("click", () => {
-    const open = mobileNav.classList.toggle("is-open");
-    mobileNav.hidden = !open;
-    burger.setAttribute("aria-expanded", open ? "true" : "false");
-  });
-
-  mobileNav?.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => {
-      mobileNav.classList.remove("is-open");
-      mobileNav.hidden = true;
-      burger?.setAttribute("aria-expanded", "false");
+  document.querySelectorAll(".menu-tabs button").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.dataset.tab;
+      document.querySelectorAll(".menu-tabs button").forEach((b) => {
+        const on = b === btn;
+        b.classList.toggle("is-on", on);
+        b.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      ["coffee", "food", "drink"].forEach((key) => {
+        const panel = document.getElementById(`tab-${key}`);
+        if (panel) panel.hidden = key !== id;
+      });
     });
   });
 
@@ -59,10 +58,7 @@
       `TG: ${tg}`,
       `Дата: ${data.get("date")} ${data.get("time")}`,
       `Гостей: ${data.get("guests")}`,
-      data.get("note") ? `Комментарий: ${data.get("note")}` : null,
-    ]
-      .filter(Boolean)
-      .join("\n");
+    ].join("\n");
     note.textContent = "Открываю Telegram…";
     window.open(`https://t.me/life_slow?text=${encodeURIComponent(text)}`, "_blank", "noopener");
   });
