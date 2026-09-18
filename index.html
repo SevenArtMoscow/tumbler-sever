@@ -3,108 +3,243 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SEVER — кофейня на Патриарших</title>
-  <meta name="description" content="SEVER — specialty coffee и завтраки. Москва, Патриаршие пруды." />
+  <title>SEVER — specialty coffee на Патриарших</title>
+  <meta name="description" content="SEVER — specialty coffee и завтраки. Москва, Патриаршие пруды. Бронь стола в Telegram. Демо TUMBLER." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@500;700;900&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <a class="skip" href="#menu">К меню</a>
+  <a class="skip" href="#book">К брони</a>
 
-  <header class="top">
+  <header class="header">
     <a class="logo" href="#">SEVER</a>
     <nav class="nav" aria-label="Основная">
+      <a href="#about">О нас</a>
       <a href="#menu">Меню</a>
       <a href="#space">Зал</a>
-      <a href="#hours">Часы</a>
+      <a href="#book">Бронь</a>
     </nav>
-    <a class="btn btn-sm" href="https://t.me/life_slow" target="_blank" rel="noopener">Бронь</a>
+    <a class="btn btn-accent" href="#book">Забронировать</a>
+    <button class="burger" type="button" aria-label="Меню" aria-expanded="false">
+      <span></span><span></span>
+    </button>
   </header>
 
+  <div class="mobile-nav" hidden>
+    <a href="#about">О нас</a>
+    <a href="#menu">Меню</a>
+    <a href="#space">Зал</a>
+    <a href="#book">Бронь</a>
+  </div>
+
   <main>
-    <section class="hero" aria-label="Главный экран">
-      <div class="hero-media" role="img" aria-label="Чашка фильтр-кофе на тёмном столе у окна"></div>
-      <div class="hero-veil"></div>
-      <div class="hero-copy">
-        <p class="logo hero-brand">SEVER</p>
-        <h1>Северный свет.<br />Крепкий кофе.</h1>
-        <p class="lede">Specialty на Патриарших. Фильтр, эспрессо, завтраки до полудня.</p>
-        <div class="hero-actions">
-          <a class="btn" href="https://t.me/life_slow" target="_blank" rel="noopener">Забронировать стол</a>
-          <a class="link-quiet" href="#menu">Смотреть меню</a>
+    <section class="hero">
+      <div class="hero-media">
+        <img
+          src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1920&q=80"
+          alt="Чашка фильтр-кофе на столе в кофейне"
+          width="1920"
+          height="1080"
+        />
+        <div class="hero-veil"></div>
+      </div>
+      <div class="hero-inner">
+        <p class="hero-loc">Москва · Патриаршие пруды</p>
+        <h1>Северный свет.<br /><span>Крепкий кофе.</span></h1>
+        <p class="hero-lead">Specialty coffee и завтраки до полудня. Маленький зал у прудов — двенадцать мест, длинный бар, свет из окна.</p>
+        <div class="hero-cta">
+          <a class="btn btn-accent btn-lg" href="#book">Забронировать стол</a>
+          <a class="btn btn-ghost btn-lg" href="#menu">Смотреть меню</a>
         </div>
       </div>
     </section>
 
-    <section class="strip" aria-hidden="true">
-      <div class="marquee">
-        <span>FILTER · ESPRESSO · MATCHA · BREAKFAST · FILTER · ESPRESSO · MATCHA · BREAKFAST ·</span>
-        <span>FILTER · ESPRESSO · MATCHA · BREAKFAST · FILTER · ESPRESSO · MATCHA · BREAKFAST ·</span>
+    <section class="stats" aria-label="Коротко о кофейне">
+      <div class="stat"><strong>12</strong><span>мест у окна</span></div>
+      <div class="stat"><strong>8:00</strong><span>открываемся в будни</span></div>
+      <div class="stat"><strong>V60</strong><span>фильтр каждый день</span></div>
+      <div class="stat"><strong>100%</strong><span>specialty зерна</span></div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-copy">
+        <h2>Кофейня, а не проходной двор</h2>
+        <p>SEVER — про спокойное утро и честный эспрессо. Зерно ротируем каждые две недели, молоко — честное, не «для пенки». Можно с ноутбуком после 11, розетки у каждой стойки.</p>
+        <ul class="about-list">
+          <li>Обжарка партнёров из Питера и Москвы</li>
+          <li>Завтраки до 12:00</li>
+          <li>Без громкой музыки до обеда</li>
+        </ul>
+      </div>
+      <div class="about-photo">
+        <img
+          src="https://images.unsplash.com/photo-1442512595331-e89e738245a2?auto=format&fit=crop&w=1000&q=80"
+          alt="Бариста готовит кофе за стойкой"
+          width="1000"
+          height="1200"
+          loading="lazy"
+        />
       </div>
     </section>
 
     <section id="menu" class="menu">
       <div class="section-head">
-        <h2>Меню на сегодня</h2>
-        <p>Цены и позиции обновляются утром. Заказ или бронь — в Telegram.</p>
+        <h2>Меню</h2>
+        <p>Цены ориентировочные — актуальные утром у бариста или в Telegram.</p>
       </div>
-      <div class="menu-grid">
-        <article class="menu-block">
-          <h3>Кофе</h3>
-          <ul>
-            <li><span>Эспрессо</span><span class="dots"></span><span>220 ₽</span></li>
-            <li><span>Американо</span><span class="dots"></span><span>250 ₽</span></li>
-            <li><span>Капучино</span><span class="dots"></span><span>320 ₽</span></li>
-            <li><span>Флэт уайт</span><span class="dots"></span><span>340 ₽</span></li>
-            <li><span>Фильтр дня</span><span class="dots"></span><span>380 ₽</span></li>
+      <div class="menu-tabs" role="tablist" aria-label="Разделы меню">
+        <button type="button" class="menu-tab is-active" role="tab" aria-selected="true" data-tab="coffee">Кофе</button>
+        <button type="button" class="menu-tab" role="tab" aria-selected="false" data-tab="food">Завтраки</button>
+        <button type="button" class="menu-tab" role="tab" aria-selected="false" data-tab="other">Не кофе</button>
+      </div>
+      <div class="menu-panels">
+        <div class="menu-panel is-active" id="panel-coffee" role="tabpanel">
+          <div class="menu-feat">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=80" alt="Эспрессо в чашке" width="900" height="700" loading="lazy" />
+            <div>
+              <p class="tag">Хит утра</p>
+              <h3>Фильтр дня</h3>
+              <p>V60 на зерне сезона. Спроси на баре — расскажем про регион и обжарку.</p>
+              <p class="price">380 ₽</p>
+            </div>
+          </div>
+          <ul class="menu-list">
+            <li><span>Эспрессо</span><span>220 ₽</span></li>
+            <li><span>Американо</span><span>250 ₽</span></li>
+            <li><span>Капучино</span><span>320 ₽</span></li>
+            <li><span>Флэт уайт</span><span>340 ₽</span></li>
+            <li><span>Латте</span><span>350 ₽</span></li>
+            <li><span>Раф ванильный</span><span>390 ₽</span></li>
           </ul>
-        </article>
-        <article class="menu-block">
-          <h3>Завтраки</h3>
-          <ul>
-            <li><span>Скрэмбл на тосте</span><span class="dots"></span><span>490 ₽</span></li>
-            <li><span>Овсянка с грушей</span><span class="dots"></span><span>420 ₽</span></li>
-            <li><span>Сырники Sever</span><span class="dots"></span><span>460 ₽</span></li>
-            <li><span>Авокадо-тост</span><span class="dots"></span><span>520 ₽</span></li>
-            <li><span>Круассан сливочный</span><span class="dots"></span><span>290 ₽</span></li>
+        </div>
+        <div class="menu-panel" id="panel-food" role="tabpanel" hidden>
+          <div class="menu-feat">
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=900&q=80" alt="Завтрак: яйца и тост" width="900" height="700" loading="lazy" />
+            <div>
+              <p class="tag">До 12:00</p>
+              <h3>Скрэмбл на тосте</h3>
+              <p>Яйца, сливочное масло, зелень, хлеб на закваске.</p>
+              <p class="price">490 ₽</p>
+            </div>
+          </div>
+          <ul class="menu-list">
+            <li><span>Овсянка с грушей</span><span>420 ₽</span></li>
+            <li><span>Сырники Sever</span><span>460 ₽</span></li>
+            <li><span>Авокадо-тост</span><span>520 ₽</span></li>
+            <li><span>Круассан сливочный</span><span>290 ₽</span></li>
+            <li><span>Гранола с йогуртом</span><span>380 ₽</span></li>
           </ul>
-        </article>
+        </div>
+        <div class="menu-panel" id="panel-other" role="tabpanel" hidden>
+          <div class="menu-feat">
+            <img src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3000?auto=format&fit=crop&w=900&q=80" alt="Матча латте" width="900" height="700" loading="lazy" />
+            <div>
+              <p class="tag">Без кофеина</p>
+              <h3>Матча на молоке</h3>
+              <p>Церемониальный грейд, можно на растительном.</p>
+              <p class="price">420 ₽</p>
+            </div>
+          </div>
+          <ul class="menu-list">
+            <li><span>Какао</span><span>310 ₽</span></li>
+            <li><span>Чай сенча</span><span>280 ₽</span></li>
+            <li><span>Лимонад домашний</span><span>350 ₽</span></li>
+            <li><span>Вода / тоник</span><span>150 ₽</span></li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section id="space" class="space">
-      <div class="space-copy">
-        <h2>Двенадцать мест у окна</h2>
-        <p>Маленький зал, длинный бар, тихая музыка до 11. После — можно с ноутбуком, розетки у каждой стойки.</p>
-        <a class="btn btn-outline" href="https://t.me/life_slow" target="_blank" rel="noopener">Написать нам</a>
+      <div class="section-head">
+        <h2>Зал</h2>
+        <p>Двенадцать мест. Бар у окна. Тихо до одиннадцати.</p>
       </div>
-      <div class="space-shot" role="img" aria-label="Интерьер кофейни: барная стойка и свет из окна"></div>
+      <div class="space-grid">
+        <figure class="space-big">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1400&q=80" alt="Интерьер кофейни со столиками" width="1400" height="900" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Кофейня изнутри, свет из окна" width="800" height="600" loading="lazy" />
+        </figure>
+        <figure>
+          <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=800&q=80" alt="Чашка кофе на деревянном столе" width="800" height="600" loading="lazy" />
+        </figure>
+      </div>
     </section>
 
-    <section id="hours" class="hours">
-      <h2>Часы и адрес</h2>
-      <div class="hours-row">
-        <div>
-          <p class="label">Открыты</p>
-          <p>Пн–Пт 8:00–21:00<br />Сб–Вс 9:00–22:00</p>
-        </div>
-        <div>
-          <p class="label">Адрес</p>
-          <p>Москва, Патриаршие пруды<br />Малый Козихинский, 7</p>
-        </div>
-        <div>
-          <p class="label">Связь</p>
-          <p><a href="https://t.me/life_slow" target="_blank" rel="noopener">@life_slow</a><br />бронь и вопросы</p>
+    <section class="hours">
+      <div class="hours-card">
+        <h2>Часы и адрес</h2>
+        <div class="hours-grid">
+          <div>
+            <p class="label">Открыты</p>
+            <p>Пн–Пт 8:00–21:00<br />Сб–Вс 9:00–22:00</p>
+          </div>
+          <div>
+            <p class="label">Адрес</p>
+            <p>Москва, Патриаршие<br />Малый Козихинский, 7</p>
+          </div>
+          <div>
+            <p class="label">Связь</p>
+            <p><a href="https://t.me/life_slow" target="_blank" rel="noopener">@life_slow</a><br />бронь и вопросы</p>
+          </div>
         </div>
       </div>
+    </section>
+
+    <section id="book" class="book">
+      <div class="book-side">
+        <h2>Бронь стола</h2>
+        <p>Напиши имя, дату и сколько вас — подтвердим в Telegram за пару минут.</p>
+        <ul class="book-notes">
+          <li>Стол держим 15 минут</li>
+          <li>До 4 гостей за один стол</li>
+          <li>Большие компании — лучше позвонить утром</li>
+        </ul>
+      </div>
+      <form class="book-form" id="bookForm" novalidate>
+        <label>
+          <span>Имя</span>
+          <input type="text" name="name" required placeholder="Как к вам обращаться" autocomplete="name" />
+        </label>
+        <label>
+          <span>Telegram</span>
+          <input type="text" name="tg" required placeholder="@username" />
+        </label>
+        <label>
+          <span>Дата</span>
+          <input type="date" name="date" required />
+        </label>
+        <label>
+          <span>Время</span>
+          <input type="time" name="time" required value="10:00" />
+        </label>
+        <label>
+          <span>Гостей</span>
+          <select name="guests" required>
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </label>
+        <label>
+          <span>Комментарий</span>
+          <input type="text" name="note" placeholder="У окна / с ноутбуком" />
+        </label>
+        <button class="btn btn-accent btn-lg btn-block" type="submit">Отправить в Telegram</button>
+        <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+      </form>
     </section>
   </main>
 
-  <footer class="foot">
-    <p class="logo">SEVER</p>
-    <p class="fine">Демо-витрина · собрано TUMBLER для портфолио · не действующее заведение</p>
+  <footer class="footer">
+    <a class="logo" href="#">SEVER</a>
+    <p>Демо-витрина TUMBLER · не действующее заведение</p>
+    <a href="https://t.me/life_slow" target="_blank" rel="noopener">@life_slow</a>
   </footer>
 
   <script src="script.js"></script>
