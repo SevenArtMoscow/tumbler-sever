@@ -84,7 +84,8 @@ a {
 }
 
 .portal-bg img {
-  transform: scale(1.04);
+  transform: scale(1.02);
+  object-position: center 40%;
   filter: saturate(1.05);
 }
 
@@ -332,11 +333,17 @@ a {
 }
 
 .block-media {
-  border-radius: 20px;
+  border-radius: 18px;
   overflow: hidden;
-  aspect-ratio: 4 / 5;
-  max-height: 34rem;
+  aspect-ratio: 3 / 4;
+  max-height: 26rem;
+  max-width: 22rem;
+  justify-self: end;
   background: #ddd;
+}
+
+.block-media img {
+  object-position: center 30%;
 }
 
 .section-top {
@@ -369,9 +376,10 @@ a {
 .menu-split {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 1.25rem;
-  align-items: stretch;
+  grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+  gap: 1.5rem 2rem;
+  align-items: center;
+  max-width: 52rem;
 }
 
 .menu-split[hidden] {
@@ -379,9 +387,12 @@ a {
 }
 
 .menu-split img {
-  border-radius: 20px;
-  min-height: 18rem;
+  border-radius: 16px;
+  aspect-ratio: 1 / 1;
+  max-height: 18rem;
+  height: auto;
   background: #ddd;
+  object-position: center;
 }
 
 .price-list {
@@ -431,19 +442,22 @@ a {
 .gallery {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: 1.4fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1.2fr 1fr 1fr;
   gap: 0.75rem;
-  min-height: 28rem;
+  max-width: 56rem;
+  max-height: 18rem;
 }
 
 .gallery img {
-  border-radius: 18px;
+  border-radius: 14px;
   background: #ddd;
+  aspect-ratio: 4 / 3;
+  height: 100%;
+  max-height: 18rem;
 }
 
 .gallery img:first-child {
-  grid-row: 1 / span 2;
+  grid-row: auto;
 }
 
 .hours-row {
@@ -573,6 +587,8 @@ a {
 
   .gallery {
     min-height: 0;
+    max-height: none;
+    grid-template-columns: 1fr;
   }
 
   .gallery img:first-child {
@@ -581,11 +597,25 @@ a {
 
   .gallery img {
     aspect-ratio: 16 / 10;
+    max-height: 14rem;
   }
 
   .block-media {
-    max-height: none;
-    aspect-ratio: 16 / 11;
+    max-height: 16rem;
+    max-width: none;
+    justify-self: stretch;
+    aspect-ratio: 16 / 10;
+  }
+
+  .menu-split {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .menu-split img {
+    max-height: 14rem;
+    width: 100%;
+    aspect-ratio: 16 / 10;
   }
 }
 
