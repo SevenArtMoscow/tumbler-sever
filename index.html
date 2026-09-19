@@ -7,7 +7,8 @@
   <meta name="description" content="SEVER — кофейный бар. Меню, зал, бронь. Демо TUMBLER." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="images/hero.webp" type="image/webp" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,7 +16,10 @@
 
   <div class="portal">
     <div class="portal-bg">
-      <img src="images/hero.jpg" alt="" width="1920" height="1080" />
+      <picture>
+        <source srcset="images/hero.webp" type="image/webp" />
+        <img src="images/hero.jpg" alt="" width="1200" height="800" fetchpriority="high" decoding="async" />
+      </picture>
       <div class="portal-veil"></div>
     </div>
 
@@ -65,7 +69,10 @@
         <p>Маленький бар на Патриарших. Эспрессо, фильтр, завтраки до полудня. Без франшизной сети — один зал, своё зерно, свои руки.</p>
       </div>
       <div class="block-media">
-        <img src="images/barista.jpg" alt="Бариста за стойкой" width="1000" height="1200" loading="lazy" />
+        <picture>
+          <source srcset="images/barista.webp" type="image/webp" />
+          <img src="images/barista.jpg" alt="Бариста за стойкой" width="640" height="782" loading="lazy" decoding="async" />
+        </picture>
       </div>
     </section>
 
@@ -83,7 +90,10 @@
 
       <div class="menu-board" id="tab-coffee">
         <article class="menu-card featured">
-          <img src="images/espresso.jpg" alt="" width="640" height="480" loading="lazy" />
+          <picture>
+            <source srcset="images/espresso.webp" type="image/webp" />
+            <img src="images/espresso.jpg" alt="" width="640" height="480" loading="lazy" decoding="async" />
+          </picture>
           <div>
             <p class="tag">Хит утра</p>
             <h3>Фильтр дня</h3>
@@ -103,7 +113,10 @@
 
       <div class="menu-board" id="tab-food" hidden>
         <article class="menu-card featured">
-          <img src="images/breakfast.jpg" alt="" width="640" height="480" loading="lazy" />
+          <picture>
+            <source srcset="images/breakfast.webp" type="image/webp" />
+            <img src="images/breakfast.jpg" alt="" width="640" height="480" loading="lazy" decoding="async" />
+          </picture>
           <div>
             <p class="tag">До 12:00</p>
             <h3>Скрэмбл на тосте</h3>
@@ -122,7 +135,10 @@
 
       <div class="menu-board" id="tab-drink" hidden>
         <article class="menu-card featured">
-          <img src="images/matcha.jpg" alt="" width="640" height="480" loading="lazy" />
+          <picture>
+            <source srcset="images/matcha.webp" type="image/webp" />
+            <img src="images/matcha.jpg" alt="" width="640" height="480" loading="lazy" decoding="async" />
+          </picture>
           <div>
             <p class="tag">Без кофеина</p>
             <h3>Матча</h3>
@@ -159,9 +175,18 @@
         </ul>
       </div>
       <div class="space-mosaic">
-        <img class="space-main" src="images/hall1.jpg" alt="Зал кофейни" width="1200" height="800" loading="lazy" />
-        <img src="images/hall2.jpg" alt="Интерьер" width="600" height="450" loading="lazy" />
-        <img src="images/cup.jpg" alt="Чашка кофе" width="600" height="450" loading="lazy" />
+        <picture class="space-main">
+          <source srcset="images/hall1.webp" type="image/webp" />
+          <img src="images/hall1.jpg" alt="Зал кофейни" width="960" height="640" loading="lazy" decoding="async" />
+        </picture>
+        <picture>
+          <source srcset="images/hall2.webp" type="image/webp" />
+          <img src="images/hall2.jpg" alt="Интерьер" width="640" height="480" loading="lazy" decoding="async" />
+        </picture>
+        <picture>
+          <source srcset="images/cup.webp" type="image/webp" />
+          <img src="images/cup.jpg" alt="Чашка кофе" width="640" height="480" loading="lazy" decoding="async" />
+        </picture>
       </div>
     </section>
     <section id="roast" class="block block-alt">
@@ -171,7 +196,10 @@
         <p>Крутим зерно партнёров из Москвы и Питера. На баре всегда есть фильтр дня и эспрессо-бленд. Можно купить пачку 250 г с собой.</p>
       </div>
       <div class="block-media">
-        <img src="images/cup.jpg" alt="Зерно и чашка" width="1000" height="800" loading="lazy" />
+        <picture>
+          <source srcset="images/cup.webp" type="image/webp" />
+          <img src="images/cup.jpg" alt="Зерно и чашка" width="640" height="480" loading="lazy" decoding="async" />
+        </picture>
       </div>
     </section>
 

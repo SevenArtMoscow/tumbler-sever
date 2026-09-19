@@ -596,9 +596,26 @@ a {
   min-height: 0;
 }
 
+.space-mosaic picture,
+.block-media picture,
+.menu-card picture,
+.portal-bg picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .space-mosaic .space-main {
   grid-row: 1 / span 2;
   height: 100%;
+}
+
+.space-mosaic picture img,
+.block-media picture img,
+.menu-card picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hours-row {
