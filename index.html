@@ -80,11 +80,12 @@
       <div class="menu-intro">
         <p class="eyebrow">Меню</p>
         <h2>Карта бара</h2>
-        <p>Цены ориентир — актуальные утром у бариста.</p>
+        <p>Полный ассортимент на сегодня. Цены ориентир — актуальные утром у бариста. Растительное молоко +60 ₽.</p>
         <div class="menu-tabs" role="tablist">
           <button type="button" class="is-on" data-tab="coffee" role="tab" aria-selected="true">Кофе</button>
-          <button type="button" data-tab="food" role="tab" aria-selected="false">Завтраки</button>
+          <button type="button" data-tab="food" role="tab" aria-selected="false">Завтраки и еда</button>
           <button type="button" data-tab="drink" role="tab" aria-selected="false">Не кофе</button>
+          <button type="button" data-tab="shop" role="tab" aria-selected="false">С собой</button>
         </div>
       </div>
 
@@ -97,18 +98,38 @@
           <div>
             <p class="tag">Хит утра</p>
             <h3>Фильтр дня</h3>
-            <p>V60 на зерне сезона — спроси регион на баре.</p>
+            <p>V60 на зерне сезона — спроси регион и обжарку на баре.</p>
             <strong class="price">380 ₽</strong>
           </div>
         </article>
-        <ul class="menu-rows">
-          <li><div><span class="name">Эспрессо</span><span class="desc">двойной по запросу</span></div><span class="dots" aria-hidden="true"></span><b>220 ₽</b></li>
-          <li><div><span class="name">Американо</span><span class="desc">горячий / айс</span></div><span class="dots" aria-hidden="true"></span><b>250 ₽</b></li>
-          <li><div><span class="name">Капучино</span><span class="desc">классика 180 мл</span></div><span class="dots" aria-hidden="true"></span><b>320 ₽</b></li>
-          <li><div><span class="name">Флэт уайт</span><span class="desc">плотнее молока</span></div><span class="dots" aria-hidden="true"></span><b>340 ₽</b></li>
-          <li><div><span class="name">Латте</span><span class="desc">можно растительное</span></div><span class="dots" aria-hidden="true"></span><b>350 ₽</b></li>
-          <li><div><span class="name">Раф ванильный</span><span class="desc">мягкий, сливочный</span></div><span class="dots" aria-hidden="true"></span><b>390 ₽</b></li>
-        </ul>
+        <div class="menu-cols">
+          <div>
+            <h4 class="menu-col-title">Эспрессо-бар</h4>
+            <ul class="menu-rows">
+              <li><div><span class="name">Эспрессо</span><span class="desc">одинарный</span></div><span class="dots" aria-hidden="true"></span><b>220 ₽</b></li>
+              <li><div><span class="name">Доппио</span><span class="desc">двойной</span></div><span class="dots" aria-hidden="true"></span><b>280 ₽</b></li>
+              <li><div><span class="name">Американо</span><span class="desc">горячий / айс</span></div><span class="dots" aria-hidden="true"></span><b>250 ₽</b></li>
+              <li><div><span class="name">Лунго</span><span class="desc">длинный шот</span></div><span class="dots" aria-hidden="true"></span><b>240 ₽</b></li>
+              <li><div><span class="name">Капучино</span><span class="desc">180 мл</span></div><span class="dots" aria-hidden="true"></span><b>320 ₽</b></li>
+              <li><div><span class="name">Капучино большой</span><span class="desc">300 мл</span></div><span class="dots" aria-hidden="true"></span><b>380 ₽</b></li>
+              <li><div><span class="name">Флэт уайт</span><span class="desc">плотнее молока</span></div><span class="dots" aria-hidden="true"></span><b>340 ₽</b></li>
+              <li><div><span class="name">Латте</span><span class="desc">классика</span></div><span class="dots" aria-hidden="true"></span><b>350 ₽</b></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="menu-col-title">Авторское и фильтр</h4>
+            <ul class="menu-rows">
+              <li><div><span class="name">Раф ванильный</span><span class="desc">сливочный</span></div><span class="dots" aria-hidden="true"></span><b>390 ₽</b></li>
+              <li><div><span class="name">Раф лаванда</span><span class="desc">сезонный</span></div><span class="dots" aria-hidden="true"></span><b>410 ₽</b></li>
+              <li><div><span class="name">Мокка</span><span class="desc">какао + эспрессо</span></div><span class="dots" aria-hidden="true"></span><b>400 ₽</b></li>
+              <li><div><span class="name">Айс-латте</span><span class="desc">со льдом</span></div><span class="dots" aria-hidden="true"></span><b>370 ₽</b></li>
+              <li><div><span class="name">Батч-брю</span><span class="desc">холодный фильтр</span></div><span class="dots" aria-hidden="true"></span><b>360 ₽</b></li>
+              <li><div><span class="name">V60 / фильтр дня</span><span class="desc">зерно сезона</span></div><span class="dots" aria-hidden="true"></span><b>380 ₽</b></li>
+              <li><div><span class="name">Эспрессо-тоник</span><span class="desc">тоник, лёд</span></div><span class="dots" aria-hidden="true"></span><b>390 ₽</b></li>
+              <li><div><span class="name">Аффогато</span><span class="desc">с мороженым</span></div><span class="dots" aria-hidden="true"></span><b>420 ₽</b></li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div class="menu-board" id="tab-food" hidden>
@@ -124,13 +145,30 @@
             <strong class="price">490 ₽</strong>
           </div>
         </article>
-        <ul class="menu-rows">
-          <li><div><span class="name">Овсянка с грушей</span><span class="desc">мёд, орех</span></div><span class="dots" aria-hidden="true"></span><b>420 ₽</b></li>
-          <li><div><span class="name">Сырники Sever</span><span class="desc">сметана / джем</span></div><span class="dots" aria-hidden="true"></span><b>460 ₽</b></li>
-          <li><div><span class="name">Авокадо-тост</span><span class="desc">чиа, лимон</span></div><span class="dots" aria-hidden="true"></span><b>520 ₽</b></li>
-          <li><div><span class="name">Круассан</span><span class="desc">сливочный</span></div><span class="dots" aria-hidden="true"></span><b>290 ₽</b></li>
-          <li><div><span class="name">Гранола</span><span class="desc">с йогуртом</span></div><span class="dots" aria-hidden="true"></span><b>380 ₽</b></li>
-        </ul>
+        <div class="menu-cols">
+          <div>
+            <h4 class="menu-col-title">Завтраки</h4>
+            <ul class="menu-rows">
+              <li><div><span class="name">Овсянка с грушей</span><span class="desc">мёд, орех</span></div><span class="dots" aria-hidden="true"></span><b>420 ₽</b></li>
+              <li><div><span class="name">Сырники Sever</span><span class="desc">сметана / джем</span></div><span class="dots" aria-hidden="true"></span><b>460 ₽</b></li>
+              <li><div><span class="name">Авокадо-тост</span><span class="desc">чиа, лимон</span></div><span class="dots" aria-hidden="true"></span><b>520 ₽</b></li>
+              <li><div><span class="name">Шакшука</span><span class="desc">2 яйца, лепёшка</span></div><span class="dots" aria-hidden="true"></span><b>540 ₽</b></li>
+              <li><div><span class="name">Гранола</span><span class="desc">йогурт, ягоды</span></div><span class="dots" aria-hidden="true"></span><b>380 ₽</b></li>
+              <li><div><span class="name">Яичница с беконом</span><span class="desc">тост</span></div><span class="dots" aria-hidden="true"></span><b>480 ₽</b></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="menu-col-title">Выпечка и перекус</h4>
+            <ul class="menu-rows">
+              <li><div><span class="name">Круассан</span><span class="desc">сливочный</span></div><span class="dots" aria-hidden="true"></span><b>290 ₽</b></li>
+              <li><div><span class="name">Круассан миндальный</span><span class="desc">из печи</span></div><span class="dots" aria-hidden="true"></span><b>340 ₽</b></li>
+              <li><div><span class="name">Синнабон</span><span class="desc">корица</span></div><span class="dots" aria-hidden="true"></span><b>320 ₽</b></li>
+              <li><div><span class="name">Брауни</span><span class="desc">шоколад</span></div><span class="dots" aria-hidden="true"></span><b>280 ₽</b></li>
+              <li><div><span class="name">Чизкейк</span><span class="desc">день / кусок</span></div><span class="dots" aria-hidden="true"></span><b>390 ₽</b></li>
+              <li><div><span class="name">Сэндвич курица</span><span class="desc">до 16:00</span></div><span class="dots" aria-hidden="true"></span><b>450 ₽</b></li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div class="menu-board" id="tab-drink" hidden>
@@ -142,16 +180,69 @@
           <div>
             <p class="tag">Без кофеина</p>
             <h3>Матча</h3>
-            <p>Церемониальный грейд, на молоке или растительном.</p>
+            <p>Церемониальный грейд — на молоке или растительном.</p>
             <strong class="price">420 ₽</strong>
           </div>
         </article>
-        <ul class="menu-rows">
-          <li><div><span class="name">Какао</span><span class="desc">горячий</span></div><span class="dots" aria-hidden="true"></span><b>310 ₽</b></li>
-          <li><div><span class="name">Чай сенча</span><span class="desc">чайник</span></div><span class="dots" aria-hidden="true"></span><b>280 ₽</b></li>
-          <li><div><span class="name">Лимонад</span><span class="desc">домашний</span></div><span class="dots" aria-hidden="true"></span><b>350 ₽</b></li>
-          <li><div><span class="name">Вода / тоник</span><span class="desc">0.33</span></div><span class="dots" aria-hidden="true"></span><b>150 ₽</b></li>
-        </ul>
+        <div class="menu-cols">
+          <div>
+            <h4 class="menu-col-title">Чай и какао</h4>
+            <ul class="menu-rows">
+              <li><div><span class="name">Какао</span><span class="desc">горячий</span></div><span class="dots" aria-hidden="true"></span><b>310 ₽</b></li>
+              <li><div><span class="name">Горячий шоколад</span><span class="desc">густой</span></div><span class="dots" aria-hidden="true"></span><b>360 ₽</b></li>
+              <li><div><span class="name">Чай сенча</span><span class="desc">чайник</span></div><span class="dots" aria-hidden="true"></span><b>280 ₽</b></li>
+              <li><div><span class="name">Чай эрл грей</span><span class="desc">чайник</span></div><span class="dots" aria-hidden="true"></span><b>280 ₽</b></li>
+              <li><div><span class="name">Травяной сбор</span><span class="desc">мята / ромашка</span></div><span class="dots" aria-hidden="true"></span><b>300 ₽</b></li>
+              <li><div><span class="name">Глинтвейн б/а</span><span class="desc">сезон</span></div><span class="dots" aria-hidden="true"></span><b>340 ₽</b></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="menu-col-title">Холодное</h4>
+            <ul class="menu-rows">
+              <li><div><span class="name">Лимонад цитрус</span><span class="desc">домашний</span></div><span class="dots" aria-hidden="true"></span><b>350 ₽</b></li>
+              <li><div><span class="name">Лимонад ягода</span><span class="desc">сезон</span></div><span class="dots" aria-hidden="true"></span><b>370 ₽</b></li>
+              <li><div><span class="name">Матча тоник</span><span class="desc">лёд</span></div><span class="dots" aria-hidden="true"></span><b>400 ₽</b></li>
+              <li><div><span class="name">Смузи банан</span><span class="desc">молоко / овес</span></div><span class="dots" aria-hidden="true"></span><b>420 ₽</b></li>
+              <li><div><span class="name">Вода / тоник</span><span class="desc">0.33</span></div><span class="dots" aria-hidden="true"></span><b>150 ₽</b></li>
+              <li><div><span class="name">Сок апельсин</span><span class="desc">свежий</span></div><span class="dots" aria-hidden="true"></span><b>390 ₽</b></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-board" id="tab-shop" hidden>
+        <article class="menu-card featured">
+          <picture>
+            <source srcset="images/cup.webp" type="image/webp" />
+            <img src="images/cup.jpg" alt="" width="640" height="480" loading="lazy" decoding="async" />
+          </picture>
+          <div>
+            <p class="tag">Домой</p>
+            <h3>Зерно 250 г</h3>
+            <p>Эспрессо-бленд или фильтр сезона — помолем под твою машину.</p>
+            <strong class="price">890 ₽</strong>
+          </div>
+        </article>
+        <div class="menu-cols">
+          <div>
+            <h4 class="menu-col-title">Зерно и дрип</h4>
+            <ul class="menu-rows">
+              <li><div><span class="name">Бленд Sever 250 г</span><span class="desc">эспрессо</span></div><span class="dots" aria-hidden="true"></span><b>890 ₽</b></li>
+              <li><div><span class="name">Фильтр сезона 250 г</span><span class="desc">лайт</span></div><span class="dots" aria-hidden="true"></span><b>980 ₽</b></li>
+              <li><div><span class="name">Дрип-пакет ×5</span><span class="desc">в дорогу</span></div><span class="dots" aria-hidden="true"></span><b>450 ₽</b></li>
+              <li><div><span class="name">Дрип-пакет ×10</span><span class="desc">набор</span></div><span class="dots" aria-hidden="true"></span><b>820 ₽</b></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="menu-col-title">Аксессуары</h4>
+            <ul class="menu-rows">
+              <li><div><span class="name">Кружка Sever</span><span class="desc">керамика</span></div><span class="dots" aria-hidden="true"></span><b>1200 ₽</b></li>
+              <li><div><span class="name">Термостакан</span><span class="desc">0.35</span></div><span class="dots" aria-hidden="true"></span><b>1590 ₽</b></li>
+              <li><div><span class="name">Шоппер</span><span class="desc">хлопок</span></div><span class="dots" aria-hidden="true"></span><b>690 ₽</b></li>
+              <li><div><span class="name">Подарочный сертификат</span><span class="desc">от 1000 ₽</span></div><span class="dots" aria-hidden="true"></span><b>—</b></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 

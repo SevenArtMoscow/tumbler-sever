@@ -34,7 +34,7 @@
         b.classList.toggle("is-on", on);
         b.setAttribute("aria-selected", on ? "true" : "false");
       });
-      ["coffee", "food", "drink"].forEach((key) => {
+      ["coffee", "food", "drink", "shop"].forEach((key) => {
         const panel = document.getElementById(`tab-${key}`);
         if (panel) panel.hidden = key !== id;
       });

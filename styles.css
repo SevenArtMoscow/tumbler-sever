@@ -361,8 +361,8 @@ a {
 }
 
 .menu-intro {
-  max-width: 36rem;
-  margin-bottom: 1.75rem;
+  max-width: 48rem;
+  margin-bottom: 2rem;
 }
 
 .menu-intro h2 {
@@ -375,6 +375,7 @@ a {
 .menu-intro > p:not(.eyebrow) {
   margin: 0 0 1.1rem;
   color: var(--mute);
+  max-width: 48ch;
 }
 
 .menu-tabs {
@@ -406,10 +407,11 @@ a {
 
 .menu-board {
   display: grid;
-  grid-template-columns: minmax(0, 17rem) minmax(0, 1fr);
-  gap: 1.5rem 2.25rem;
-  align-items: stretch;
-  max-width: 58rem;
+  grid-template-columns: minmax(14rem, 18rem) minmax(0, 1fr);
+  gap: 1.75rem 2.5rem;
+  align-items: start;
+  width: 100%;
+  max-width: 72rem;
 }
 
 .menu-card.featured {
@@ -419,17 +421,20 @@ a {
   border: 1px solid var(--line);
   border-radius: 18px;
   overflow: hidden;
+  position: sticky;
+  top: 5.5rem;
 }
 
-.menu-card.featured img {
+.menu-card.featured img,
+.menu-card.featured picture {
   aspect-ratio: 5 / 4;
-  max-height: 11rem;
+  max-height: 12rem;
 }
 
 .menu-card.featured > div {
-  padding: 1rem 1.05rem 1.15rem;
+  padding: 1.1rem 1.15rem 1.25rem;
   display: grid;
-  gap: 0.35rem;
+  gap: 0.4rem;
   flex: 1;
 }
 
@@ -444,7 +449,7 @@ a {
 
 .menu-card h3 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 800;
 }
 
@@ -457,17 +462,32 @@ a {
 .menu-card .price {
   margin-top: auto;
   padding-top: 0.55rem;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: var(--ink);
+}
+
+.menu-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2.75rem;
+  min-width: 0;
+}
+
+.menu-col-title {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mute);
 }
 
 .menu-rows {
   list-style: none;
   margin: 0;
-  padding: 0.15rem 0;
+  padding: 0;
   display: grid;
-  align-content: center;
   gap: 0;
 }
 
@@ -476,7 +496,7 @@ a {
   grid-template-columns: auto 1fr auto;
   gap: 0.65rem;
   align-items: end;
-  padding: 0.85rem 0;
+  padding: 0.78rem 0;
   border-top: 1px solid var(--line);
 }
 
@@ -493,14 +513,14 @@ a {
 .menu-rows .desc {
   display: block;
   color: var(--mute);
-  font-size: 0.82rem;
-  margin-top: 0.12rem;
+  font-size: 0.8rem;
+  margin-top: 0.1rem;
 }
 
 .menu-rows .dots {
   border-bottom: 1px dotted rgba(42, 36, 30, 0.28);
   margin-bottom: 0.35rem;
-  min-width: 1.5rem;
+  min-width: 1.2rem;
 }
 
 .menu-rows b {
@@ -752,18 +772,25 @@ a {
 
   .menu-board {
     max-width: none;
+    grid-template-columns: 1fr;
   }
 
   .menu-card.featured {
+    position: static;
     flex-direction: row;
     align-items: stretch;
   }
 
-  .menu-card.featured img {
+  .menu-card.featured img,
+  .menu-card.featured picture {
     width: 38%;
     max-height: none;
     aspect-ratio: auto;
     align-self: stretch;
+  }
+
+  .menu-cols {
+    grid-template-columns: 1fr 1fr;
   }
 
   .space-mosaic {
@@ -796,10 +823,15 @@ a {
     flex-direction: column;
   }
 
-  .menu-card.featured img {
+  .menu-card.featured img,
+  .menu-card.featured picture {
     width: 100%;
     aspect-ratio: 16 / 10;
     max-height: 11rem;
+  }
+
+  .menu-cols {
+    grid-template-columns: 1fr;
   }
 
   .space-mosaic {
