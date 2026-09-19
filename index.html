@@ -69,68 +69,101 @@
       </div>
     </section>
 
-    <section id="menu" class="block block-alt">
-      <div class="section-top">
+    <section id="menu" class="menu-section">
+      <div class="menu-intro">
         <p class="eyebrow">Меню</p>
-        <h2>Что пьём и едим</h2>
+        <h2>Карта бара</h2>
+        <p>Цены ориентир — актуальные утром у бариста.</p>
+        <div class="menu-tabs" role="tablist">
+          <button type="button" class="is-on" data-tab="coffee" role="tab" aria-selected="true">Кофе</button>
+          <button type="button" data-tab="food" role="tab" aria-selected="false">Завтраки</button>
+          <button type="button" data-tab="drink" role="tab" aria-selected="false">Не кофе</button>
+        </div>
       </div>
-      <div class="menu-tabs" role="tablist">
-        <button type="button" class="is-on" data-tab="coffee" role="tab" aria-selected="true">Кофе</button>
-        <button type="button" data-tab="food" role="tab" aria-selected="false">Завтраки</button>
-        <button type="button" data-tab="drink" role="tab" aria-selected="false">Не кофе</button>
-      </div>
-      <div class="menu-split" id="tab-coffee">
-        <img src="images/espresso.jpg" alt="Эспрессо" width="900" height="700" loading="lazy" />
-        <ul class="price-list">
-          <li><span>Эспрессо</span><b>220 ₽</b></li>
-          <li><span>Американо</span><b>250 ₽</b></li>
-          <li><span>Капучино</span><b>320 ₽</b></li>
-          <li><span>Флэт уайт</span><b>340 ₽</b></li>
-          <li><span>Латте</span><b>350 ₽</b></li>
-          <li><span>Фильтр дня</span><b>380 ₽</b></li>
+
+      <div class="menu-board" id="tab-coffee">
+        <article class="menu-card featured">
+          <img src="images/espresso.jpg" alt="" width="640" height="480" loading="lazy" />
+          <div>
+            <p class="tag">Хит утра</p>
+            <h3>Фильтр дня</h3>
+            <p>V60 на зерне сезона — спроси регион на баре.</p>
+            <strong class="price">380 ₽</strong>
+          </div>
+        </article>
+        <ul class="menu-rows">
+          <li><div><span class="name">Эспрессо</span><span class="desc">двойной по запросу</span></div><span class="dots" aria-hidden="true"></span><b>220 ₽</b></li>
+          <li><div><span class="name">Американо</span><span class="desc">горячий / айс</span></div><span class="dots" aria-hidden="true"></span><b>250 ₽</b></li>
+          <li><div><span class="name">Капучино</span><span class="desc">классика 180 мл</span></div><span class="dots" aria-hidden="true"></span><b>320 ₽</b></li>
+          <li><div><span class="name">Флэт уайт</span><span class="desc">плотнее молока</span></div><span class="dots" aria-hidden="true"></span><b>340 ₽</b></li>
+          <li><div><span class="name">Латте</span><span class="desc">можно растительное</span></div><span class="dots" aria-hidden="true"></span><b>350 ₽</b></li>
+          <li><div><span class="name">Раф ванильный</span><span class="desc">мягкий, сливочный</span></div><span class="dots" aria-hidden="true"></span><b>390 ₽</b></li>
         </ul>
       </div>
-      <div class="menu-split" id="tab-food" hidden>
-        <img src="images/breakfast.jpg" alt="Завтрак" width="900" height="700" loading="lazy" />
-        <ul class="price-list">
-          <li><span>Скрэмбл на тосте</span><b>490 ₽</b></li>
-          <li><span>Овсянка с грушей</span><b>420 ₽</b></li>
-          <li><span>Сырники Sever</span><b>460 ₽</b></li>
-          <li><span>Авокадо-тост</span><b>520 ₽</b></li>
-          <li><span>Круассан</span><b>290 ₽</b></li>
+
+      <div class="menu-board" id="tab-food" hidden>
+        <article class="menu-card featured">
+          <img src="images/breakfast.jpg" alt="" width="640" height="480" loading="lazy" />
+          <div>
+            <p class="tag">До 12:00</p>
+            <h3>Скрэмбл на тосте</h3>
+            <p>Яйца, масло, зелень, хлеб на закваске.</p>
+            <strong class="price">490 ₽</strong>
+          </div>
+        </article>
+        <ul class="menu-rows">
+          <li><div><span class="name">Овсянка с грушей</span><span class="desc">мёд, орех</span></div><span class="dots" aria-hidden="true"></span><b>420 ₽</b></li>
+          <li><div><span class="name">Сырники Sever</span><span class="desc">сметана / джем</span></div><span class="dots" aria-hidden="true"></span><b>460 ₽</b></li>
+          <li><div><span class="name">Авокадо-тост</span><span class="desc">чиа, лимон</span></div><span class="dots" aria-hidden="true"></span><b>520 ₽</b></li>
+          <li><div><span class="name">Круассан</span><span class="desc">сливочный</span></div><span class="dots" aria-hidden="true"></span><b>290 ₽</b></li>
+          <li><div><span class="name">Гранола</span><span class="desc">с йогуртом</span></div><span class="dots" aria-hidden="true"></span><b>380 ₽</b></li>
         </ul>
       </div>
-      <div class="menu-split" id="tab-drink" hidden>
-        <img src="images/matcha.jpg" alt="Матча" width="900" height="700" loading="lazy" />
-        <ul class="price-list">
-          <li><span>Матча</span><b>420 ₽</b></li>
-          <li><span>Какао</span><b>310 ₽</b></li>
-          <li><span>Чай сенча</span><b>280 ₽</b></li>
-          <li><span>Лимонад</span><b>350 ₽</b></li>
+
+      <div class="menu-board" id="tab-drink" hidden>
+        <article class="menu-card featured">
+          <img src="images/matcha.jpg" alt="" width="640" height="480" loading="lazy" />
+          <div>
+            <p class="tag">Без кофеина</p>
+            <h3>Матча</h3>
+            <p>Церемониальный грейд, на молоке или растительном.</p>
+            <strong class="price">420 ₽</strong>
+          </div>
+        </article>
+        <ul class="menu-rows">
+          <li><div><span class="name">Какао</span><span class="desc">горячий</span></div><span class="dots" aria-hidden="true"></span><b>310 ₽</b></li>
+          <li><div><span class="name">Чай сенча</span><span class="desc">чайник</span></div><span class="dots" aria-hidden="true"></span><b>280 ₽</b></li>
+          <li><div><span class="name">Лимонад</span><span class="desc">домашний</span></div><span class="dots" aria-hidden="true"></span><b>350 ₽</b></li>
+          <li><div><span class="name">Вода / тоник</span><span class="desc">0.33</span></div><span class="dots" aria-hidden="true"></span><b>150 ₽</b></li>
         </ul>
       </div>
     </section>
 
-    <section id="guest" class="strip-yellow">
+    <section id="guest" class="strip-soft">
       <div>
         <h2>Для гостя</h2>
-        <p>Wi‑Fi, розетки, можно со своим ноутбуком после 11:00. Детям — какао и круассан. Собаки мелких пород — ок, если не мешают залу.</p>
+        <p>Wi‑Fi, розетки, ноутбук после 11:00. Детям — какао и круассан. Мелкие собаки — если не мешают залу.</p>
       </div>
       <a class="btn-dark" href="#book">Занять стол</a>
     </section>
 
-    <section id="space" class="block">
-      <div class="section-top">
+    <section id="space" class="space-section">
+      <div class="space-copy">
         <p class="eyebrow">Зал</p>
         <h2>Двенадцать мест у окна</h2>
+        <p>Длинный бар, тихая музыка до обеда, свет с Патриарших. Можно вдвоём у стойки или за столом у стекла.</p>
+        <ul class="space-facts">
+          <li><strong>12</strong><span>посадочных</span></li>
+          <li><strong>4</strong><span>стойки у бара</span></li>
+          <li><strong>розетки</strong><span>у каждого места</span></li>
+        </ul>
       </div>
-      <div class="gallery">
-        <img src="images/hall1.jpg" alt="Зал кофейни" width="1400" height="900" loading="lazy" />
-        <img src="images/hall2.jpg" alt="Интерьер" width="800" height="600" loading="lazy" />
-        <img src="images/cup.jpg" alt="Чашка кофе" width="800" height="600" loading="lazy" />
+      <div class="space-mosaic">
+        <img class="space-main" src="images/hall1.jpg" alt="Зал кофейни" width="1200" height="800" loading="lazy" />
+        <img src="images/hall2.jpg" alt="Интерьер" width="600" height="450" loading="lazy" />
+        <img src="images/cup.jpg" alt="Чашка кофе" width="600" height="450" loading="lazy" />
       </div>
     </section>
-
     <section id="roast" class="block block-alt">
       <div class="block-copy">
         <p class="eyebrow">Зерно</p>
